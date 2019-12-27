@@ -19,8 +19,11 @@ with open('content.json') as f:
   jrelated=jdata['related']
   jimage_urls=jdata['image_urls']
 
-jdetailsdescription=jdetails['description_html']
+  jtitle=jentry['title']
+  jimage_url=jentry['image_url']
+  jdetailsdescription=jdetails['description_html']
 
+print(jentry)
 print(jdetails)
 print(jdetailsdescription)
 
@@ -28,10 +31,17 @@ htmlDOCTYPE = '<!DOCTYPE html>'
 htmlTag = '<html>'
 htmlTagEnd = '</html>'
 htmlHeadTag = '<head>'
-htmlMeta = '<meta charset="UTF-8>"'
+htmlMeta = '<meta charset="UTF-8"> '
+htmlCSSFile = '<link rel="stylesheet" type="text/css" media="screen" title="Custom Settings" href="lesson1.css" >'
 htmlHeadTagEnd = '</head>'
 htmlBodyTag = '<body>'
 htmlBodyTagEnd = '</body>'
+htmlEntryImageTag = '<img id="main_image" src="'
+htmlEntryImageTagEnd = '" alt>' 
+htmlH1Tag = '<h1>'
+htmlH1TagEnd = '</h1>'
+htmlParaTag = '<p>'
+htmlParaTagEnd = '</p>'
 
 #writefile = open('content.html', 'r+')
 #writefile.write(htmlTag)
@@ -48,8 +58,17 @@ with open('content.html', 'r+') as wf:
   wf.write(htmlTag)
   wf.write(htmlHeadTag)
   wf.write(htmlMeta)
+  wf.write(htmlCSSFile)
   wf.write(htmlHeadTagEnd)
   wf.write(htmlBodyTag)
+  wf.write(htmlEntryImageTag)
+  wf.write(jimage_url)
+  wf.write(htmlEntryImageTagEnd)
+  wf.write(htmlH1Tag)
+  wf.write(jtitle)
+  wf.write(htmlH1TagEnd)
+  wf.write(htmlParaTag)
   wf.write(jdetailsdescription)
+  wf.write(htmlParaTagEnd)
   wf.write(htmlBodyTagEnd)
   wf.write(htmlTagEnd)

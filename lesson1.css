@@ -1,0 +1,18 @@
+body {
+    background-color: #ffffff;
+    font-family:    Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  h1 {
+    line-height:    1.4;
+    margin-bottom: 15px;
+    font-weight: 400;
+    /*text-align: center;
+    */
+}
+  
+  p {
+    /*font-family: verdana;*/
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
