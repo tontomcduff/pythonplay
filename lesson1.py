@@ -19,7 +19,7 @@ with open('content.json') as f:
   jrelated=jdata['related']
   jimage_urls=jdata['image_urls']
 
-jdetailsdescription=jdetails['description']
+jdetailsdescription=jdetails['description_html']
 
 print(jdetails)
 print(jdetailsdescription)
@@ -28,7 +28,7 @@ htmlDOCTYPE = '<!DOCTYPE html>'
 htmlTag = '<html>'
 htmlTagEnd = '</html>'
 htmlHeadTag = '<head>'
-htmlMeta = 'meta charset="UTF-8"'
+htmlMeta = '<meta charset="UTF-8>"'
 htmlHeadTagEnd = '</head>'
 htmlBodyTag = '<body>'
 htmlBodyTagEnd = '</body>'
