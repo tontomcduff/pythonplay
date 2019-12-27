@@ -1,11 +1,11 @@
 import json
 
-openfile = open('c:\\python34\\content.json', 'r')
+openfile = open('content.json', 'r')
 a = openfile.read()
 
 #print (a)
 
-with open('c:\\python34\\content.json') as f:
+with open('content.json') as f:
   jfile = json.load(f)
   entryversion=jfile['version']
   entryerror=jfile['error']
@@ -24,20 +24,32 @@ jdetailsdescription=jdetails['description']
 print(jdetails)
 print(jdetailsdescription)
 
+htmlDOCTYPE = '<!DOCTYPE html>'
 htmlTag = '<html>'
 htmlTagEnd = '</html>'
 htmlHeadTag = '<head>'
+htmlMeta = 'meta charset="UTF-8"'
 htmlHeadTagEnd = '</head>'
 htmlBodyTag = '<body>'
 htmlBodyTagEnd = '</body>'
 
-writefile = open('c:\\python34\\content.html', 'r+')
-writefile.write(htmlTag)
-writefile.write(htmlHeadTag)
-writefile.write(htmlHeadTagEnd)
-writefile.write(htmlBodyTag)
-writefile.write(jdetailsdescription)
-writefile.write(htmlBodyTagEnd)
-writefile.write(htmlTagEnd)
-writefile.close
+#writefile = open('content.html', 'r+')
+#writefile.write(htmlTag)
+#writefile.write(htmlHeadTag)
+#writefile.write(htmlHeadTagEnd)
+#writefile.write(htmlBodyTag)
+#writefile.write(jdetailsdescription)
+#writefile.write(htmlBodyTagEnd)
+#writefile.write(htmlTagEnd)
+#writefile.close
 
+with open('content.html', 'r+') as wf:
+  wf.write(htmlDOCTYPE)
+  wf.write(htmlTag)
+  wf.write(htmlHeadTag)
+  wf.write(htmlMeta)
+  wf.write(htmlHeadTagEnd)
+  wf.write(htmlBodyTag)
+  wf.write(jdetailsdescription)
+  wf.write(htmlBodyTagEnd)
+  wf.write(htmlTagEnd)
