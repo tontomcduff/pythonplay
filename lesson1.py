@@ -42,6 +42,8 @@ htmlH1Tag = '<h1>'
 htmlH1TagEnd = '</h1>'
 htmlParaTag = '<p>'
 htmlParaTagEnd = '</p>'
+htmlDivInnerBodyStart = '<Div id="body_inner">'
+htmlDivEnd = '</Div>'
 
 #writefile = open('content.html', 'r+')
 #writefile.write(htmlTag)
@@ -61,6 +63,7 @@ with open('content.html', 'r+') as wf:
   wf.write(htmlCSSFile)
   wf.write(htmlHeadTagEnd)
   wf.write(htmlBodyTag)
+  wf.write(htmlDivInnerBodyStart)
   wf.write(htmlEntryImageTag)
   wf.write(jimage_url)
   wf.write(htmlEntryImageTagEnd)
@@ -70,5 +73,6 @@ with open('content.html', 'r+') as wf:
   wf.write(htmlParaTag)
   wf.write(jdetailsdescription)
   wf.write(htmlParaTagEnd)
+  wf.write(htmlDivEnd)
   wf.write(htmlBodyTagEnd)
   wf.write(htmlTagEnd)
