@@ -43,6 +43,7 @@ htmlH1TagEnd = '</h1>'
 htmlParaTag = '<p>'
 htmlParaTagEnd = '</p>'
 
+
 #writefile = open('content.html', 'r+')
 #writefile.write(htmlTag)
 #writefile.write(htmlHeadTag)
